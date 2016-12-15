@@ -1,0 +1,5 @@
+http://introcs.cs.princeton.edu/java/31datatype/Picture.java.html
+https://docs.oracle.com/javase/tutorial/uiswing/components/filechooser.html
+http://stackoverflow.com/questions/35301828/image-read-write-in-java-without-imageio-between-local-file-systems
+https://www.mkyong.com/java/how-to-make-a-file-read-only-in-java/
+http://stackoverflow.com/questions/9477257/create-a-read-only-file
