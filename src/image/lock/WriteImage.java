@@ -17,19 +17,18 @@ import javax.imageio.ImageIO;
 
 public class WriteImage {
 
-    public WriteImage(File file) {
+    public WriteImage(File file, Object path) {
         BufferedImage image = null;
         try {
 
             URL url = new URL("http://www.mkyong.com/image/mypic.jpg");
-            image = ImageIO.read(url);
-            File outputfile = new File("E:\\dpkg.png");            
-            ImageIO.write(image, "jpg", new File("E:\\out.jpg"));
-            ImageIO.write(image, "gif", new File("E:\\out.gif"));
+            image = ImageIO.read(file);
+            File outputfile = new File(path+"/dpkg.png");            
+            ImageIO.write(image, "jpg", new File(path+"/out.jpg"));
+            ImageIO.write(image, "gif", new File(path+"/out.gif"));
             ImageIO.write(image, "png", outputfile);            
-            outputfile.setReadOnly();
-            outputfile.setWritable(false);
-            outputfile.setWritable(false, true);
+            outputfile.setReadOnly();            
+            outputfile.setWritable(false, false);
 
         } catch (IOException e) {
             e.printStackTrace();

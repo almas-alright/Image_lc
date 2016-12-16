@@ -62,6 +62,8 @@ public class FileChooserDemo extends JPanel
 
         //Create a file chooser
         fc = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("JPEG", "jpeg", "jpg", "png", "bmp", "gif");
+        fc.addChoosableFileFilter(filter);
 
         //Uncomment one of the following lines to try a different
         //file selection mode.  The first allows just directories
@@ -115,7 +117,7 @@ public class FileChooserDemo extends JPanel
             if (returnVal == JFileChooser.APPROVE_OPTION) {
                 File file = fc.getSelectedFile();                
                 //This is where a real application would save the file.
-                new WriteImage(file);
+                new WriteImage(file, fc.getCurrentDirectory());
                 log.append("Saving: " + file.getName() + "." + newline);
             } else {
                 log.append("Save command cancelled by user." + newline);
